@@ -1,7 +1,7 @@
 import './App.css';
 import {
   BrowserRouter,
-  Routes,
+  Switch,
   Route,
 } from "react-router-dom";
 import Header from './Pages/Shared/Header';
@@ -11,14 +11,18 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        
-      </Routes>
-      <Footer></Footer>
-    </BrowserRouter>
-    
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </BrowserRouter>
+
     </div>
   );
 }

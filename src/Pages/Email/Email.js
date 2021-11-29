@@ -1,49 +1,70 @@
-import { Container, Row, Col, Form, FloatingLabel, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './Email.css'
 
 const Email = () => {
- 
+    const tostify = () => {
+        toast.success('Message Send Successfull ', {
+            position: "top-center",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          
+        });
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+        emailjs.sendForm('service_74q30d3', 'template_fbn1zdw', e.target, 'user_AEBd3Ukge2S5SripPAeyU')
+            .then((result) => {
+                tostify()
+               
+            }, (error) => {
+                console.log(error.text);
+            });
+
+    }
+
     return (
-        <Container fluid className="mt-5 pt-5">
-  
-            <Row xs={1} md={3}>
-                <Col md={2}></Col>
-
-                <Col md={8}>
-                    <div className="contact-form w-75 mx-auto">
-                        
-                                <div className="get-touch ">
-                                    <p className="text-primary text-start">Get in touch</p>
-                                    <Form className="">
-                                        <Form.Group className=" mt-3 mb-3" controlId="formGroupEmail">
-
-                                            <Form.Control type="email" placeholder="Enter name" />
-                                        </Form.Group>
-                                        <Form.Group className=" mt-3 mb-3" controlId="formGroupEmail">
-
-                                        <Form.Control type="email" placeholder="Enter email" />
-                                    </Form.Group>
-                                        <Form.Group className=" mt-3 mb-3" controlId="formGroupEmail">
-
-                                            <Form.Control type="email" placeholder="Enter subject" />
-                                        </Form.Group>
-                                        <FloatingLabel controlId="floatingTextarea" label="Message" className="mb-3">
-                                            <Form.Control as="textarea" placeholder="Leave a comment here" />
-                                        </FloatingLabel>
-                                        <Button variant="primary" size="sm" type="submit" className="w-50 mx-auto mb-3">Send Message</Button>
-                                    </Form>
-
-                                </div>
-                           
-                    </div>
-                </Col>
-                <Col md={2}></Col>
-
-            </Row>
-
-
-        </Container>
+        <div id="contact">
+            <Container fluid className="mt-5 pt-5">
+                <Row xs={1} md={3}>
+                    <Col md={2} className="mt-5 pt-5"></Col>
+                    <Col md={8} className="mt-5 pt-5">
+                        <div className="contact-form w-75 mx-auto ">
+                            <div className="get-touch w-75 mx-auto">
+                                <p className="text-white text-start pt-3 fs-2">Get in touch</p>
+                                <form className="row" onSubmit={sendEmail}>
+                                    <label className="text-white text-start">Name</label>
+                                    <input type="text" name="name" className="form-control" />
+                                    <label className="text-white text-start">Email</label>
+                                    <input type="email" name="user_email" className="form-control" />
+                                    <label className="text-white text-start">Message</label>
+                                    <textarea name="message" cols="12" rows="3" className="form-control"></textarea>
+                                    <input  type="submit" value="Send" className="form-control btn btn-primary mt-3" />
+                                </form>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md={2} className="mt-5 pt-5"></Col>
+                </Row>
+            </Container>
+            <ToastContainer position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover />
+        </div>
     );
 };
 

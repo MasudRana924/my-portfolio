@@ -7,10 +7,10 @@ import Skills from '../Skills/Skills';
 
 const Home = () => {
     return (
-        <div>
+        <div id="home">
             <Banner></Banner>
             <About></About>
-            <Projects></Projects>
+            <Projects id="projects"></Projects>
             <Skills></Skills>
             <Email></Email>
         </div>

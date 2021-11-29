@@ -86,37 +86,39 @@ const Projects = () => {
         ]
     };
     return (
-        <Container fluid className="mt-5 pt-5 pb-5" id="projects">
-            <div className="container ">
-                <h2 className="text-center ms-3 pt-3 text-white pb-5">Projects</h2>
+        <div id="pojects">
+            <Container fluid className="mt-5 pt-5 pb-5" >
+                <div className="container mt-5 pt-5" >
+                    <h2 className="text-center ms-3 pt-3 text-white pb-5">Projects</h2>
 
-                {
-                    works.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
-                    </div> :
-                        <Slider {...Rsettings}>
+                    {
+                        works.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
+                        </div> :
+                            <Slider {...Rsettings}>
 
-                            {
-                                works.map(project => (
+                                {
+                                    works.map(project => (
 
-                                    <div className="" >
-                                        <div className="hotels-card ms-1">
-                                            <img className="hotel-image" src={project.img} alt="" />
-                                            <p className="mt-1 text-white fw-bold">{project.name}</p>
+                                        <div className="" >
+                                            <div className="hotels-card ms-1">
+                                                <img className="hotel-image" src={project.img} alt="" />
+                                                <p className="mt-1 text-white fw-bold">{project.name}</p>
 
 
+                                            </div>
                                         </div>
-                                    </div>
 
-                                ))
-                            }
-
+                                    ))
+                                }
 
 
-                        </Slider>
-                }
 
-            </div>
-        </Container>
+                            </Slider>
+                    }
+
+                </div>
+            </Container>
+        </div>
     );
 };
 
