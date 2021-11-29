@@ -5,8 +5,15 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import img from '../../Images/241886469_3075688522677532_3963189163640105276_n-removebg-preview-removebg-preview.jpg'
 import './About.css'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const About = () => {
+    AOS.init({
+        duration:400,
+          offset: 420,
+          
+      })
     const arrow = <FontAwesomeIcon icon={faArrowDown} />
     const fb = <FontAwesomeIcon icon={faFacebook} className="icon"/>
     const git = <FontAwesomeIcon icon={faGithub}className="icon" />
@@ -16,10 +23,14 @@ const About = () => {
             <Container fluid className="mt-5 pt-5">
                 <Row xs={1} md={2}>
                     <Col md={6} className="pt-5 pt-5">
+                        <div  data-aos="fade-right">
                         <img src={img} className=" main-img" alt="" />
+                        </div>
+
+                    
                     </Col>
                     <Col xs={12} md={6} order>
-                        <div className="mt-5 pt-5">
+                        <div data-aos="fade-up" data-aos-offset="420" data-aos-easing="ease-in-sine" data-aos-duration="400" className="mt-5 pt-5">
                             <h2 className="text-white pb-5">About Me</h2>
                             <p className="phone text-start text-secondary">Eager to learning something new and develop my skills and always wants to work under a skillful mentor and i love to explore my skills in React.js</p>
 

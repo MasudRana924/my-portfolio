@@ -4,7 +4,7 @@
 }
 .hotels-card{
     height:200px;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 .slick-prev:before, .slick-next:before {
     color: blue !important;
