@@ -55,7 +55,7 @@ const Email = () => {
                                     <input type="email" name="user_email" className="form-control" />
                                     <label className="text-white text-start">Message</label>
                                     <textarea name="message" cols="12" rows="3" className="form-control"></textarea>
-                                    <input  type="submit" value="Send" className="form-control btn btn-primary mt-3" />
+                                    <input  type="submit" value="Send" className="form-control btn btn-warning mt-3" />
                                 </form>
                               
                             </div>

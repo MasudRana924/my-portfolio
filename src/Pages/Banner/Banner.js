@@ -5,8 +5,15 @@ import resume from '../../Images/resume.pdf'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './Banner.css'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const Banner = () => {
+    AOS.init({
+        duration:400,
+          offset: 420,
+          
+      })
     const phone = <FontAwesomeIcon icon={faPhone} />
     const email = <FontAwesomeIcon icon={faEnvelope} />
     return (
@@ -23,7 +30,7 @@ const Banner = () => {
                         <p className="phone text-secondary  text-start  ps-5 ms-5">{email} masud15-924@diu.edu.bd</p>
                       
                         <a href={resume} download>
-                            <Button size="sm" className="resume-btn ">Download Resume</Button>
+                            <Button size="sm" variant="warning" className="resume-btn ">Download Resume</Button>
                         </a>
                       
                         
@@ -32,7 +39,10 @@ const Banner = () => {
                 </Col>
 
                 <Col xs={12} md={6} className="pt-5 ">
-                    <img src={img} className="mt-3 main-img" alt="" />
+                    <div  data-aos="fade-down">
+                    <img src={img} className="mt-5 main-img" alt="" />
+                    </div>
+                
                 </Col>
             </Row>
 

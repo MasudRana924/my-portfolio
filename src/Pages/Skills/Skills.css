@@ -1,4 +1,17 @@
-.html{
- position: relative;
- margin-top: -60px;
+.skill-icon{
+    font-size: 60px;
+    color:goldenrod;
+}
+.skills-icon{
+    font-size: 20px;
+    color:springgreen;
+}
+.services-card{
+    border:1px solid rgb(15, 17, 24);
+   height:250px;
+
+}
+.services-desc{
+    font-size: 13px;
+    
 }
