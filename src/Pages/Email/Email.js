@@ -13,7 +13,7 @@ const Email = () => {
           
       })
     const tostify = () => {
-        toast.success('Message Send Successfull ', {
+        toast.success('Message Sent ', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
@@ -47,7 +47,7 @@ const Email = () => {
                     <Col md={8} className="mt-5 pt-5">
                         <div className="contact-form w-75 mx-auto ">
                             <div data-aos="zoom-in" className="get-touch w-75 mx-auto">
-                                <p className="text-white text-start pt-3 fs-2">Get in touch</p>
+                                <p className="text-warning text-start pt-3 fs-2">Get in touch</p>
                                 <form className="row" onSubmit={sendEmail}>
                                     <label className="text-white text-start">Name</label>
                                     <input type="text" name="name" className="form-control" />

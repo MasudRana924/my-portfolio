@@ -23,7 +23,7 @@ const About = () => {
             <Container fluid className="mt-5 pt-5">
                 <Row xs={1} md={2}>
                     <Col md={6} className="pt-5 pt-5">
-                        <div  data-aos="fade-right">
+                        <div  data-aos="fade-right" className="about-img">
                         <img src={img} className=" main-img" alt="" />
                         </div>
 
@@ -31,7 +31,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} md={6} order>
                         <div data-aos="fade-up" data-aos-offset="420" data-aos-easing="ease-in-sine" data-aos-duration="400" className="mt-5 pt-5">
-                            <h2 className="text-white pb-5">About Me</h2>
+                            <h2 className="text-warning pb-5">About Me</h2>
                             <p className="phone text-start text-secondary">Eager to learning something new and develop my skills and always wants to work under a skillful mentor and i love to explore my skills in React.js</p>
 
                             <p className="text-start text-white">Also I am good at {arrow} </p>

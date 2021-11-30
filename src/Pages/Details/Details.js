@@ -10,7 +10,7 @@ const Details = () => {
 
     const [projects, setProjects] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/projects/${projectId}`)
+        fetch(`https://polar-basin-49676.herokuapp.com/projects/${projectId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap, faReact, faEnvira, faHtml5, faCss3, faNodeJs, faJsSquare } from '@fortawesome/free-brands-svg-icons'
 import './Skills.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Skills = () => {
     const boot = <FontAwesomeIcon icon={faBootstrap} className="skill-icon" />
@@ -15,10 +18,16 @@ const Skills = () => {
     const nodejs = <FontAwesomeIcon icon={faNodeJs} className="skills-icon" />
     const js = <FontAwesomeIcon icon={faJsSquare} className="skills-icon" />
     const db = <FontAwesomeIcon icon={faEnvira} className="skills-icon" />
+
+    AOS.init({
+        duration:400,
+          offset: 420,
+          
+      })
     return (
         <div id="services">
             <Container fluid className="mt-5 pt-5 pb-5">
-                <h2 className="text-center text-secondary  pb-5">Services & Skills </h2>
+                <h2 className="text-center text-warning  pb-5">Services & Skills </h2>
                 <Row xs={1} md={2}>
                     <Col className="mt-3">
                         <div>
@@ -52,7 +61,7 @@ const Skills = () => {
                         </div>
                     </Col>
                     <Col className="mt-3">
-                        <div className="w-75 mx-auto">
+                        <div data-aos="zoom-in"  className="w-75 mx-auto">
                             <p className="text-start text-secondary">{html} HTML5</p>
                             <ProgressBar striped variant="warning" now={100} />
                             <p className="text-start text-secondary mt-1">{css} CSS</p>

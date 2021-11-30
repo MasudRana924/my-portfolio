@@ -10,7 +10,7 @@ const Projects = () => {
     
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/projects')
+        fetch('https://polar-basin-49676.herokuapp.com/projects')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -59,7 +59,7 @@ const Projects = () => {
         <div id="pojects">
             <Container fluid className="mt-5 pt-5 pb-5" >
                 <div className="container mt-5 pt-5" >
-                    <h2 className="text-center ms-3 pt-3 text-white pb-5">Projects</h2>
+                    <h2 className="text-center ms-3 pt-3 text-warning pb-5">My Projects</h2>
 
                     {
                         projects.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
