@@ -1,0 +1,22 @@
+.details-section{
+    margin-top: 200px;
+}
+.details-image{
+    width:100%;
+}
+.details-images-section{
+    border:1px solid rgb(15, 17, 24);
+}
+.image-card{
+    border:1px solid rgb(15, 17, 24);
+}
+.details-images{
+    width:100%;
+    height:150px;  
+}
+.desc{
+    font-size: 16px;
+    text-align: start;
+    margin-left: 20px;
+    color: aliceblue;
+}

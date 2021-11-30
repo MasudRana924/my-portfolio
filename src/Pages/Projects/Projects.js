@@ -1,52 +1,22 @@
-import React from 'react';
-import { Container, Spinner } from 'react-bootstrap';
-import img from '../../Images/Screenshot (131).png'
-import img2 from '../../Images/Screenshot (134).png'
-import img3 from '../../Images/Screenshot (132).png'
-import img4 from '../../Images/Screenshot (133).png'
+import React, { useState,useEffect } from 'react';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import './Projects.css'
-
-
-const works = [
-    {
-        img: img,
-        name: 'HotelResBD',
-
-    },
-    {
-        img: img2,
-        name: 'FoodHurry',
-
-    },
-    {
-        img: img3,
-        name: 'eaysShades',
-
-    },
-    {
-        img: img4,
-        name: 'TropBook',
-
-    },
-    {
-        img: img3,
-        name: 'eaysShades',
-
-    },
-    {
-        img: img4,
-        name: 'TropBook',
-
-    }
-
-]
-
-
+import { Link } from 'react-router-dom';
 const Projects = () => {
+    
+    const [projects, setProjects] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/projects')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setProjects(data)
+            })
+    }, [])
 
     let Rsettings = {
         dots: false,
@@ -92,17 +62,29 @@ const Projects = () => {
                     <h2 className="text-center ms-3 pt-3 text-white pb-5">Projects</h2>
 
                     {
-                        works.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
+                        projects.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
                         </div> :
+                            // <Row xs={1} md={3} className="">
+
+                            //     {
+                            //         works.map(project => <Project
+                            //         key={project.id}
+                            //         project={project}
+                            //         ></Project>)
+                            //     }
+                            // </Row>
                             <Slider {...Rsettings}>
 
                                 {
-                                    works.map(project => (
+                                    projects.map(project => (
 
                                         <div className="" >
                                             <div className="hotels-card ms-1">
                                                 <img className="hotel-image" src={project.img} alt="" />
-                                                <p className="mt-1 text-white fw-bold">{project.name}</p>
+                                                <Link to={`/details/${project._id}`} className="text-decoration-none">
+                                                    <p className="mt-1 text-white fw-bold">{project.name}</p>
+                                                </Link>
+
 
 
                                             </div>
@@ -114,6 +96,8 @@ const Projects = () => {
 
 
                             </Slider>
+
+
                     }
 
                 </div>
@@ -123,3 +107,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+

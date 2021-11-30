@@ -8,6 +8,7 @@ import Header from './Pages/Shared/Header';
 import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Blog from './Pages/Blog/Blog';
+import Details from './Pages/Details/Details';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,10 @@ function App() {
           <Route path="/blog">
             <Blog></Blog>
           </Route>
+          <Route path="/details/:projectId">
+              <Details></Details>
+
+            </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

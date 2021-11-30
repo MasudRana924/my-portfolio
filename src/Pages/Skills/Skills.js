@@ -53,17 +53,17 @@ const Skills = () => {
                     </Col>
                     <Col className="mt-3">
                         <div className="w-75 mx-auto">
-                            <p className="text-start">{html}HTML5</p>
+                            <p className="text-start text-secondary">{html} HTML5</p>
                             <ProgressBar striped variant="warning" now={100} />
-                            <p className="text-start mt-1">{css} CSS</p>
+                            <p className="text-start text-secondary mt-1">{css} CSS</p>
                             <ProgressBar striped variant="warning" now={90} />
-                            <p className="text-start mt-1">{js} JavaScript</p>
+                            <p className="text-start text-secondary mt-1">{js} JavaScript</p>
                             <ProgressBar striped variant="warning" now={75} />
-                            <p className="text-start mt-1">{reactjs}React JS</p>
+                            <p className="text-start text-secondary mt-1">{reactjs} React JS</p>
                             <ProgressBar striped variant="warning" now={90} />
-                            <p className="text-start mt-1">{nodejs}NodeJS</p>
+                            <p className="text-start text-secondary mt-1">{nodejs} NodeJS</p>
                             <ProgressBar striped variant="warning" now={80} />
-                            <p className="text-start mt-1">{db}MongoDB</p>
+                            <p className="text-start text-secondary mt-1">{db} MongoDB</p>
                             <ProgressBar striped variant="warning" now={90} />
                         </div>
                     </Col>
