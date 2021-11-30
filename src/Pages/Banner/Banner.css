@@ -10,6 +10,10 @@
 }
 .phone{
     font-size: 16px;
+   
+}
+.phone-icon{
+    color:gold;
 }
 @media only screen and (min-width: 600px) {
     .resume-btn {

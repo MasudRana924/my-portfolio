@@ -28,6 +28,7 @@ function App() {
               <Details></Details>
 
             </Route>
+            
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

@@ -3,15 +3,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Email.css'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
 const Email = () => {
-    AOS.init({
-        duration:400,
-          offset: 420,
-          
-      })
     const tostify = () => {
         toast.success('Message Sent ', {
             position: "top-center",
@@ -24,7 +16,6 @@ const Email = () => {
 
         });
     }
-
     const sendEmail = (e) => {
         e.preventDefault()
          emailjs.sendForm('service_74q30d3', 'template_fbn1zdw', e.target, 'user_AEBd3Ukge2S5SripPAeyU')
@@ -37,16 +28,14 @@ const Email = () => {
              });
 
     }
-   
-
     return (
         <div id="contact">
             <Container fluid className="mt-5 pt-5">
-                <Row xs={1} md={3}>
-                    <Col md={2} className="mt-5 pt-5"></Col>
-                    <Col md={8} className="mt-5 pt-5">
+                <Row xs={1} md={3} className="mt-3">
+                    <Col md={2} className=""></Col>
+                    <Col md={8} className="">
                         <div className="contact-form w-75 mx-auto ">
-                            <div data-aos="zoom-in" className="get-touch w-75 mx-auto">
+                            <div  className="get-touch w-75 mx-auto">
                                 <p className="text-warning text-start pt-3 fs-2">Get in touch</p>
                                 <form className="row" onSubmit={sendEmail}>
                                     <label className="text-white text-start">Name</label>

@@ -9,7 +9,8 @@
 		"link": "https://hotelres-ed4a7.web.app/",
 		"descOne": "HotelBooking website ",
 		"descTwo": "User can book room , see their profile, set update profile ,manage bookings",
-		"descThree": "Admin has all access to manage users bookings & everything of data"
+		"descThree": "Admin has all access to manage users bookings & everything of data",
+		"tools":"HTML , CSS , Bootstrap ,React,Node.Js , MongoDB,Firebase"
 	},
 	{
 		
@@ -21,7 +22,8 @@
 		"link": "https://foodhurry-com-d4bd8.web.app/",
 		"descOne": "Onilne Food Order website",
 		"descTwo": "User can orders food",
-		"descThree": "Admin has all access to manage users orders & everything of data"
+		"descThree": "Admin has all access to manage users orders & everything of data",
+		"tools":"HTML , CSS , Bootstrap ,React,Node.Js , MongoDB,Firebase"
 	},
 	{
 		
@@ -33,7 +35,8 @@
 		"link": "https://eyesshades-5f891.web.app/",
 		"descOne": "Niche product website  about sunglasses",
 		"descTwo": "User can order , see orders , give review  after create a account by email ",
-		"descThree": "Admin has the access to manage all client & server"
+		"descThree": "Admin has the access to manage all client & server",
+		"tools":"HTML , CSS , Bootstrap ,React,Node.Js , MongoDB,Firebase"
 	},
 	{
 		
@@ -45,6 +48,7 @@
 		"link": "https://healthsurgery-2f223.web.app/",
 		"descOne": "Hospital Management website ",
 		"descTwo": "User can book,manage appointment",
-		"descThree": "Admin panel on process"
+		"descThree": "Admin panel on process",
+		"tools":"HTML , CSS , Bootstrap ,React,Node.Js , MongoDB,Firebase"
 	}
 ]

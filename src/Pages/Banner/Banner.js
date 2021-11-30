@@ -14,8 +14,8 @@ const Banner = () => {
           offset: 420,
           
       })
-    const phone = <FontAwesomeIcon icon={faPhone} />
-    const email = <FontAwesomeIcon icon={faEnvelope} />
+    const phone = <FontAwesomeIcon icon={faPhone} className="phone-icon"/>
+    const email = <FontAwesomeIcon icon={faEnvelope} className="phone-icon"/>
     return (
         <Container fluid className="banner mt-5 pt-5 pb-5">
             <Row xs={1} md={2}>

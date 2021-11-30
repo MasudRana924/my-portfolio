@@ -58,8 +58,8 @@ const Projects = () => {
     return (
         <div id="pojects">
             <Container fluid className="mt-5 pt-5 pb-5" >
-                <div className="container mt-5 pt-5" >
-                    <h2 className="text-center ms-3 pt-3 text-warning pb-5">My Projects</h2>
+                <div className="container mt-3 " >
+                    <h2 className="text-center  pt-3 text-warning pb-5">My Projects</h2>
 
                     {
                         projects.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />

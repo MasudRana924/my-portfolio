@@ -14,7 +14,7 @@ const About = () => {
           offset: 420,
           
       })
-    const arrow = <FontAwesomeIcon icon={faArrowDown} />
+    const arrow = <FontAwesomeIcon icon={faArrowDown}  className="icon"/>
     const fb = <FontAwesomeIcon icon={faFacebook} className="icon"/>
     const git = <FontAwesomeIcon icon={faGithub}className="icon" />
     const linkedin = <FontAwesomeIcon icon={faLinkedin} className="icon"/>

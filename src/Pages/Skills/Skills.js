@@ -27,10 +27,10 @@ const Skills = () => {
     return (
         <div id="services">
             <Container fluid className="mt-5 pt-5 pb-5">
-                <h2 className="text-center text-warning  pb-5">Services & Skills </h2>
+                <h2 className="text-center text-warning mt-5  pb-5">Services & Skills </h2>
                 <Row xs={1} md={2}>
                     <Col className="mt-3">
-                        <div>
+                        <div data-aos="fade-down" data-aos-offset="420"  data-aos-duration="400">
                             <Row>
                                 <Col>
                                     <div className="services-card">
@@ -61,7 +61,7 @@ const Skills = () => {
                         </div>
                     </Col>
                     <Col className="mt-3">
-                        <div data-aos="zoom-in"  className="w-75 mx-auto">
+                        <div data-aos="fade-up"  className="w-75 mx-auto">
                             <p className="text-start text-secondary">{html} HTML5</p>
                             <ProgressBar striped variant="warning" now={100} />
                             <p className="text-start text-secondary mt-1">{css} CSS</p>

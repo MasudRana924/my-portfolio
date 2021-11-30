@@ -1,0 +1,11 @@
+.cap-icon{
+   font-size: 60px;
+   color: gold;
+   margin-top: 30px;
+}
+.education-section{
+    border: 1px solid ;
+    border:1px solid rgb(15, 17, 24);
+    height:300px;
+    box-shadow: 1px 1px gainsboro;
+}

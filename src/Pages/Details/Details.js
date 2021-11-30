@@ -39,11 +39,14 @@ const Details = () => {
 
                         </div>
                         <p className="mt-1 text-warning fw-bold fs-2">{projects.name}</p>
+                        <p className="mt-1 text-warning  text-start">Features </p>
                         <p className="desc mt-3">- {projects.descOne}</p>
                         <p className="desc">- {projects.descTwo}</p>
                         <p className="desc">- {projects.descThree}
                             <a href={projects.link} target="_blank" rel="noopener noreferrer" className="text-warning text-decoration-none ms-3">live site</a>
                         </p>
+                        <p className="mt-1 text-warning  text-start">Technology Used </p>
+                        <p className="desc">- {projects.tools}</p>
 
 
 
