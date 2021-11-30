@@ -7,7 +7,7 @@
     border: 1px solid black;
 }
 .slick-prev:before, .slick-next:before {
-    color: blue !important;
+    color: gold !important;
     
   
 }
