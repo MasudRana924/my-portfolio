@@ -20,3 +20,10 @@
     }
   
   }
+  @media only screen and (max-width: 600px) {
+    .resume-btn {
+       margin-left:-25px;
+    }
+    
+  
+  }
